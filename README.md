@@ -20,6 +20,11 @@ cd backend
 nhost up
 ```
 
+## Install packages
+```
+yarn install
+```
+
 ## Setup Houdini
 
 Generate types and stores for houdini
