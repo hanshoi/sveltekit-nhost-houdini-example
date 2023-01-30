@@ -4,33 +4,15 @@ import { CachePolicy, graphql } from '$houdini';
 export let data: PageData;
 $: ({ Todo } = data);
 $: todos = $Todo?.data?.todos || [];
-
-let title: string;
-let description: string;
-const addTodo = graphql(`
-  mutation addTodo($title: String!, $description: String) {
-    insert_todos_one(object: { title: $title, description: $description }) {
-      id
-      title
-      description
-    }
-  }
-`);
-async function create() {
-  if (!title) return;
-  await addTodo.mutate({ title, description });
-  Todo.fetch({ policy: CachePolicy.NetworkOnly });
-}
 </script>
 
 <div class="py-4">
   <div class="h-96 rounded-lg border-4 border-dashed border-gray-200">
     <div class="flex flex-row p-3">
-      <form method="POST" on:submit|preventDefault={create} class="basis-1/2 space-y-3">
+      <form method="POST" class="basis-1/2 space-y-3">
         <div>
           <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
           <input
-            bind:value={title}
             type="text"
             name="title"
             id="title"
@@ -43,7 +25,6 @@ async function create() {
             >Description</label
           >
           <input
-            bind:value={description}
             type="text"
             name="description"
             id="description"
