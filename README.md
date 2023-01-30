@@ -1,4 +1,5 @@
 # SvelteKit Nhost Houdini Example
+Stack
 
 ## Prequisites
 
