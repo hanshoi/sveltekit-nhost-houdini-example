@@ -1,5 +1,9 @@
 # SvelteKit Nhost Houdini Example
-Stack
+Stack consist of:
+* SvelteKit frontend for a modern and cool development experience. 
+* Nhost for backend, database and authentication/authorization.
+* houdini for graphql client.
+* tailwindcss to make it all look great.
 
 ## Prequisites
 
