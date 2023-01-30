@@ -1,0 +1,5 @@
+INSERT INTO auth.users (id,created_at,updated_at,last_seen,disabled,display_name,avatar_url,locale,email,phone_number,password_hash,email_verified,phone_number_verified,new_email,otp_method_last_used,otp_hash,otp_hash_expires_at,default_role,is_anonymous,totp_secret,active_mfa_type,ticket,ticket_expires_at,metadata,webauthn_current_challenge) VALUES
+	 ('e513c31e-e8b5-4553-8425-94866b3a22c6','2023-01-30 18:58:54.067','2023-01-30 18:58:54.067',NULL,false,'admin@example.com','https://s.gravatar.com/avatar/e64c7d89f26bd1972efa854d13d7dd61?r=g&default=blank','en','admin@example.com',NULL,'$2a$10$dX1I6ZI2G/ZVhdv9TvDsqu079Vscmyif4xAt4YDnWDu42DyGNBs1K',true,false,NULL,NULL,NULL,'2023-01-30 18:58:54.067','user',false,NULL,NULL,'verifyEmail:16e08f95-5efb-44bf-a88c-961de542aa3a','2023-03-01 18:58:54.064','{}',NULL);
+INSERT INTO auth.user_roles (id,created_at,user_id,"role") VALUES
+	 ('7449840e-9cba-40f0-80be-5a0d793d535c','2023-01-30 18:58:54.067','e513c31e-e8b5-4553-8425-94866b3a22c6','user'),
+	 ('9bb97672-0a58-4ea7-ae56-a893f5e1acab','2023-01-30 18:58:54.067','e513c31e-e8b5-4553-8425-94866b3a22c6','me');
